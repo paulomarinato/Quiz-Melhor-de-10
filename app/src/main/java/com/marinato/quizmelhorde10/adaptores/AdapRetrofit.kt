@@ -7,7 +7,7 @@ class AdapRetrofit {
     companion object {
         fun InstanceRetrofit(path: String) : Retrofit{
             return Retrofit.Builder()
-                .baseUrl(path)
+                .baseUrl("https://quiz-api-bwi5hjqyaq-uc.a.run.app/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }

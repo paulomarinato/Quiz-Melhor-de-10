@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">QuizMelhorDe10</string>
+    <string name="inform_your_nickname">Informe Seu Apelido</string>
+    <string name="nickname">Apelido</string>
+    <string name="Play">JOGAR</string>
+    <string name="welcome">Bem Vindo ao</string>
+    <string name="best_of_ten">Melhor de 10</string>
 </resources>

@@ -7,7 +7,7 @@
     android:background="@color/Cor1"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".activity.MainActivity">
+    tools:context=".MainActivity">
 
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40sp"
-        android:background="@color/Cor2"
+        android:background="@color/Cor4"
         android:gravity="center"
         android:text="@string/welcome"
         android:textColor="@color/Cor1"
@@ -56,20 +56,20 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/Cor4"
+            android:background="@color/Cor2"
             android:gravity="center"
-            android:text="Clique no campo abaixo, informe o seu Apelido e teste o seu conhecimento"
-            android:textColor="@color/Cor1"
+            android:text="@string/presentation"
+            android:textColor="@color/black"
             android:textSize="22sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
-            android:background="@color/Cor4"
+            android:background="@color/Cor2"
             android:gravity="center"
             android:hint="@string/inform_your_nickname"
-            android:textColor="@color/Cor1"
+            android:textColor="@color/Cor2"
             android:textSize="30sp" />
 
         <Button

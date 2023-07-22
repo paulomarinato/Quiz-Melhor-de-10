@@ -7,89 +7,98 @@
     android:background="@color/Cor1"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
-
-
-    <TextView
-        android:id="@+id/Text_welcome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40sp"
-        android:background="@color/Cor4"
-        android:gravity="center"
-        android:text="@string/welcome"
-        android:textColor="@color/Cor1"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent" />
+    tools:context=".Activity.MainActivity">
 
     <TextView
-        android:id="@+id/text_best_of_ten"
+        android:id="@+id/text_api"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8sp"
-        android:background="@color/Cor4"
         android:gravity="center"
-        android:text="@string/best_of_ten"
-        android:textColor="@color/Cor1"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text_welcome" />
 
-    <LinearLayout
+        android:hint="@string/nome"/>
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/text_best_of_ten"
-        app:layout_constraintTop_toBottomOf="@+id/text_best_of_ten"
-        app:layout_constraintTop_toTopOf="@+id/text_best_of_ten">
-
+    <!--
         <TextView
+            android:id="@+id/Text_welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/Cor2"
+            android:layout_marginTop="40sp"
+            android:background="@color/Cor4"
             android:gravity="center"
-            android:text="@string/presentation"
-            android:textColor="@color/black"
-            android:textSize="22sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
-            android:background="@color/Cor2"
-            android:gravity="center"
-            android:hint="@string/inform_your_nickname"
-            android:textColor="@color/Cor2"
-            android:textSize="30sp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
-            android:gravity="center"
-            android:text="@string/Play"
+            android:text="@string/welcome"
             android:textColor="@color/Cor1"
-            android:textSize="24sp" />
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintMarginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="16sp"
-            android:src="@drawable/pergunta" />
+        <TextView
+            android:id="@+id/text_best_of_ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:background="@color/Cor4"
+            android:gravity="center"
+            android:text="@string/best_of_ten"
+            android:textColor="@color/Cor1"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Text_welcome" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintMarginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/text_best_of_ten"
+            app:layout_constraintTop_toBottomOf="@+id/text_best_of_ten"
+            app:layout_constraintTop_toTopOf="@+id/text_best_of_ten">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Cor2"
+                android:gravity="center"
+                android:text="@string/presentation"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:background="@color/Cor2"
+                android:gravity="center"
+                android:hint="@string/inform_your_nickname"
+                android:textColor="@color/Cor2"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:text="@string/Play"
+                android:textColor="@color/Cor1"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16sp"
+                android:src="@drawable/pergunta" />
 
 
-    </LinearLayout>
+        </LinearLayout>
+         -->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 

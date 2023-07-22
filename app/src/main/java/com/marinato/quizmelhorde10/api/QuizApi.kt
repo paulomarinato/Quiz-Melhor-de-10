@@ -1,4 +1,4 @@
-package com.marinato.quizmelhorde10
+package com.marinato.quizmelhorde10.api
 
 import com.marinato.quizmelhorde10.model.AnswerRequest
 import com.marinato.quizmelhorde10.model.Questions
@@ -11,7 +11,6 @@ import retrofit2.http.Query
 
 interface QuizApi {
 
-
     @GET("/question")
     fun getQuestion(param: Call<Questions>): Call<Questions>
     @POST("/answer")
@@ -19,5 +18,6 @@ interface QuizApi {
                    @Query("questionId") questionId: Int) : Call<Boolean>
     @DELETE("/delete")
     fun deleteUser(@Query("questionId") questionId: Int) : Call<Boolean>
+
 
 }

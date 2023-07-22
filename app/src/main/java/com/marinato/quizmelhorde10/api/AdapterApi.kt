@@ -2,7 +2,6 @@ package com.marinato.quizmelhorde10.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 object AdapterApi {
 
@@ -12,5 +11,4 @@ object AdapterApi {
         .build()
 
     val QuizApi = retrofir.create(QuizApi::class.java)
-
 }

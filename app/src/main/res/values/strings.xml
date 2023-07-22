@@ -1,5 +1,7 @@
 <resources>
 
+
+    <string name="app_name">Melhor de 10</string>
     <string name="welcome">Venha desafiar seu conhecimento no</string>
     <string name="best_of_ten">Melhor de 10</string>
     <string name="presentation">Informe seu apelido e \n vamos jogar</string>

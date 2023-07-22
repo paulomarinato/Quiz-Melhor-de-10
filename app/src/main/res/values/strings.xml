@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">QuizMelhorDe10</string>
-    <string name="inform_your_nickname">Informe Seu Apelido</string>
-    <string name="nickname">Apelido</string>
-    <string name="Play">Iniciar Quiz</string>
-    <string name="welcome">Bem Vindo ao</string>
+
+    <string name="welcome">Venha desafiar seu conhecimento no</string>
     <string name="best_of_ten">Melhor de 10</string>
-    <string name="presentation">Clique no campo abaixo, informe o seu Apelido e teste o seu conhecimento</string>
-    <string name="options">Options</string>
-    <string name="statement">Statement</string>
-    <string name="idquestions">IdQuestions</string>
-    <string name="confirm">Confirmar</string>
-    <string name="nome">nome</string>
+    <string name="presentation">Informe seu apelido e \n vamos jogar</string>
+    <string name="inform_your_nickname">Apelido</string>
+    <string name="Play">Inciar Quiz</string>
+    <string name="question_here">Pergunta aqui</string>
+    <string name="option1">Opção 1</string>
+    <string name="option2">Opção 2</string>
+    <string name="option3">Opção 3</string>
+    <string name="option4">Opção 4</string>
+    <string name="send_reply">Enviar Resposta</string>
 </resources>

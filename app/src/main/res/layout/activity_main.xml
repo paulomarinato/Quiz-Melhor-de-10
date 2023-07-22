@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,25 +10,32 @@
     android:padding="20dp"
     tools:context=".Activity.MainActivity">
 
-    <TextView
-        android:id="@+id/text_api"
-        android:layout_width="match_parent"
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintMarginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        android:hint="@string/nome"/>
-
-    <!--
         <TextView
             android:id="@+id/Text_welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40sp"
             android:background="@color/Cor4"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:text="@string/welcome"
             android:textColor="@color/Cor1"
-            android:textSize="26sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintMarginTop="16dp"
@@ -37,68 +45,53 @@
             android:id="@+id/text_best_of_ten"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8sp"
+            android:layout_marginTop="15sp"
             android:background="@color/Cor4"
             android:gravity="center"
             android:text="@string/best_of_ten"
-            android:textColor="@color/Cor1"
-            android:textSize="26sp"
+            android:textColor="@color/Cor3"
+            android:textSize="38sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Text_welcome" />
 
-        <LinearLayout
-
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:background="@color/Cor2"
             android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintMarginTop="16dp"
-            app:layout_constraintStart_toStartOf="@+id/text_best_of_ten"
-            app:layout_constraintTop_toBottomOf="@+id/text_best_of_ten"
-            app:layout_constraintTop_toTopOf="@+id/text_best_of_ten">
+            android:text="@string/presentation"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/Cor2"
-                android:gravity="center"
-                android:text="@string/presentation"
-                android:textColor="@color/black"
-                android:textSize="22sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:background="@color/Cor2"
+            android:hint="@string/inform_your_nickname"
+            android:textColor="@color/Cor2"
+            android:textSize="26sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                android:background="@color/Cor2"
-                android:gravity="center"
-                android:hint="@string/inform_your_nickname"
-                android:textColor="@color/Cor2"
-                android:textSize="30sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:gravity="center"
+            android:text="@string/Play"
+            android:textColor="@color/Cor1"
+            android:textSize="24sp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                android:gravity="center"
-                android:text="@string/Play"
-                android:textColor="@color/Cor1"
-                android:textSize="24sp" />
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="45sp"
+            android:src="@drawable/pergunta" />
 
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="16sp"
-                android:src="@drawable/pergunta" />
+    </LinearLayout>
 
 
-        </LinearLayout>
-         -->
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 

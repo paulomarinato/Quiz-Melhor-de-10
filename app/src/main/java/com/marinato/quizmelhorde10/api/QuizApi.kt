@@ -16,8 +16,6 @@ interface QuizApi {
     @POST("/answer")
     fun saveAnswer(@Body request: AnswerRequest,
                    @Query("questionId") questionId: Int) : Call<Boolean>
-    @DELETE("/delete")
-    fun deleteUser(@Query("questionId") questionId: Int) : Call<Boolean>
 
 
 }

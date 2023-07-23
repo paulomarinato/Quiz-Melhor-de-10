@@ -2,7 +2,6 @@ package com.marinato.quizmelhorde10.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.marinato.quizmelhorde10.data.model.Adapter.AdapterApi

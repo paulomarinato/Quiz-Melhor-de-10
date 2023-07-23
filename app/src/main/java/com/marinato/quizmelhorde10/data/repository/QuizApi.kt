@@ -15,7 +15,7 @@ interface QuizApi {
 
     @POST("/answer")
     fun saveAnswer(
-        @Query("questionId") questionId: Int,
+        @Query("questionId") questionId: Int.Companion,
         @Body request: AnswerRequest,
     ): Call<Boolean>
 }

@@ -36,10 +36,6 @@ class QuestionsActivity : AppCompatActivity() {
                     .show()
             }
 
-            fun mostrarResposta() {
-
-            }
-
             override fun onFailure(call: Call<QuestionsResponse>, t: Throwable) {
                 Toast.makeText(
                     this@QuestionsActivity,

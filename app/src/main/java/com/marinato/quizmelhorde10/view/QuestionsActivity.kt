@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.marinato.quizmelhorde10.data.model.Adapter.AdapterApi
 import com.marinato.quizmelhorde10.data.repository.QuestionRepository
 import com.marinato.quizmelhorde10.databinding.ActivityQuestionsBinding
@@ -12,7 +13,7 @@ import com.marinato.quizmelhorde10.viewModel.QuestionViewModel
 class QuestionsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuestionsBinding
-    lateinit var viewModel : QuestionViewModel
+    lateinit var viewModel: QuestionViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +22,7 @@ class QuestionsActivity : AppCompatActivity() {
 
         viewModel = QuestionViewModel(QuestionRepository(AdapterApi.QuizApi))
 
-        }
+    }
 
     override fun onResume() {
         super.onResume()
@@ -30,10 +31,13 @@ class QuestionsActivity : AppCompatActivity() {
         viewModel.getAllQuestions()
     }
 
-    private fun setObservers(){
+    private fun setObservers() {
 
         viewModel.questionList.observe(this) {
-            Log.i("list: ", it.toString())
+            binding.textQuestion.text = it.statement
+            binding.recyclerOptions.layoutManager = LinearLayoutManager(this)
+            binding.recyclerOptions.adapter = RadioButtonAdapter(this, it.options, 0)
+
         }
 
         viewModel.errorMessage.observe(this) {

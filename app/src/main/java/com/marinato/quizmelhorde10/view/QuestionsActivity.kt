@@ -2,51 +2,45 @@ package com.marinato.quizmelhorde10.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.marinato.quizmelhorde10.data.AdapterApi
+import com.marinato.quizmelhorde10.data.model.Adapter.AdapterApi
+import com.marinato.quizmelhorde10.data.repository.QuestionRepository
 import com.marinato.quizmelhorde10.databinding.ActivityQuestionsBinding
-import com.marinato.quizmelhorde10.data.model.QuestionsResponse
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.marinato.quizmelhorde10.viewModel.QuestionViewModel
 
 class QuestionsActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityQuestionsBinding
+    private lateinit var binding: ActivityQuestionsBinding
+    lateinit var viewModel : QuestionViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val questionsPost = AdapterApi.QuizApi.getQuestion()
+        viewModel = QuestionViewModel(QuestionRepository(AdapterApi.QuizApi))
 
-        questionsPost.enqueue(object : Callback<QuestionsResponse> {
-            override fun onResponse(
-                call: Call<QuestionsResponse>,
-                response: Response<QuestionsResponse>,
-            ) {
-                /*binding.text_question.text = response.body().toString()*/
-                Toast.makeText(
-                    this@QuestionsActivity,
-                    response.body().toString(),
-                    Toast.LENGTH_SHORT
-                )
-                    .show()
-            }
+        }
 
-            override fun onFailure(call: Call<QuestionsResponse>, t: Throwable) {
-                Toast.makeText(
-                    this@QuestionsActivity,
-                    "Falha ao Consultar a API",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        })
+    override fun onResume() {
+        super.onResume()
+
+        setObservers()
+        viewModel.getAllQuestions()
+    }
+
+    private fun setObservers(){
+
+        viewModel.questionList.observe(this) {
+            Log.i("list: ", it.toString())
+        }
+
+        viewModel.errorMessage.observe(this) {
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+        }
     }
 }
-
 
 
 

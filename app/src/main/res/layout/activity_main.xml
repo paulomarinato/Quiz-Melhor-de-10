@@ -64,12 +64,14 @@
             android:textColor="@color/black"
             android:textSize="22sp" />
 
-        <TextView
+        <EditText
+            android:id="@+id/edit_person_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:background="@color/Cor2"
             android:hint="@string/inform_your_nickname"
+            android:inputType="textPersonName"
             android:textColor="@color/Cor2"
             android:textSize="26sp" />
 

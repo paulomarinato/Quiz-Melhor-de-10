@@ -26,42 +26,10 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <RadioGroup
-            android:id="@+id/radio_group_options"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_options"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical"  >
-
-            <RadioButton
-                android:id="@+id/radio_button_option1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/option1" />
-
-            <RadioButton
-                android:id="@+id/radio_button_option2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/option2" />
-
-            <RadioButton
-                android:id="@+id/radio_button_option3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/option3" />
-
-            <RadioButton
-                android:id="@+id/radio_button_option4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/option4" />
-            <RadioButton
-                android:id="@+id/radio_button_option5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/option5" />
-        </RadioGroup>
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/buttonSubmit"

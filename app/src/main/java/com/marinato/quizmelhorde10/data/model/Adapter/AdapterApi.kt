@@ -1,4 +1,4 @@
-package com.marinato.quizmelhorde10.data
+package com.marinato.quizmelhorde10.data.model.Adapter
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

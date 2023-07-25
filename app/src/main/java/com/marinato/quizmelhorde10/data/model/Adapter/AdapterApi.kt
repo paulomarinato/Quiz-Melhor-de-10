@@ -11,4 +11,13 @@ object AdapterApi {
         .build()
 
     val QuizApi = retrofir.create(com.marinato.quizmelhorde10.data.repository.QuizApi::class.java)
+
+    private val response = Retrofit.Builder()
+        .baseUrl("https://quiz-api-bwi5hjqyaq-uc.a.run.app/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+    val QuizApiResponse = retrofir.create(com.marinato.quizmelhorde10.data.repository.QuizApi::class.java)
+
+
 }

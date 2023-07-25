@@ -72,7 +72,7 @@
             android:background="@color/Cor2"
             android:hint="@string/inform_your_nickname"
             android:inputType="textPersonName"
-            android:textColor="@color/Cor2"
+            android:textColor="@color/black"
             android:textSize="26sp" />
 
         <Button

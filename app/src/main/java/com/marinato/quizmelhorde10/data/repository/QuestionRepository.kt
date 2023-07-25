@@ -6,6 +6,6 @@ class QuestionRepository constructor(private val quizApi: QuizApi) {
 
     fun getAllQuestions() = quizApi.getQuestion()
 
-    fun getSaveAnswer() = quizApi.saveAnswer(questionId = Int, AnswerRequest(String()))
+    fun getSaveAnswer(questionId : Int) = quizApi.saveAnswer(questionId)
 
 }

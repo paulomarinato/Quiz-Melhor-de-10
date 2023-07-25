@@ -8,8 +8,7 @@ class QuizRepositoryImpl(private val api: QuizApi) : QuizRepository {
     override fun getQuestion(): Call<QuestionsResponse> {
         return api.getQuestion()
     }
-
     override fun saveAnswer(questionId: Int, request: AnswerRequest): Call<Boolean> {
-        return api.saveAnswer(questionId, request)
+        return api.saveAnswer(questionId)
     }
 }

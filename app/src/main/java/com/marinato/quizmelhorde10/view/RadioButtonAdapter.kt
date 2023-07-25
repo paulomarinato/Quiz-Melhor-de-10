@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.marinato.quizmelhorde10.R
 
 class RadioButtonAdapter(
-
     private val context: Context,
     private val dataList: List<String>,
     private var selectedItem: Int,
+    private val onClick: (String) -> Unit
 ) : RecyclerView.Adapter<RadioButtonAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,6 +31,7 @@ class RadioButtonAdapter(
             if (selectedItem != position) {
                 selectedItem = position
                 notifyDataSetChanged()
+                onClick(dataList[position])
             }
         }
     }

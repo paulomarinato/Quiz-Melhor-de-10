@@ -2,6 +2,7 @@ package com.marinato.quizmelhorde10.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.marinato.quizmelhorde10.data.model.Adapter.AdapterApi
@@ -32,15 +33,17 @@ class QuestionsActivity : AppCompatActivity() {
 
     private fun setObservers() {
 
-        viewModel.questionList.observe(this) {
+        viewModel.questionList.observe(this) { it ->
             binding.textQuestion.text = it.statement
             binding.recyclerOptions.layoutManager = LinearLayoutManager(this)
-            binding.recyclerOptions.adapter = RadioButtonAdapter(this, it.options, 0)
-
+            binding.recyclerOptions.adapter = RadioButtonAdapter(this, it.options, 0) {
+                Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+            }
         }
 
         viewModel.errorMessage.observe(this) {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+
         }
     }
 }

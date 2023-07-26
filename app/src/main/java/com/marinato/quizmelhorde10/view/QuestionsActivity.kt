@@ -1,9 +1,8 @@
 package com.marinato.quizmelhorde10.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.RadioButton
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.marinato.quizmelhorde10.data.model.Adapter.AdapterApi
 import com.marinato.quizmelhorde10.data.repository.QuestionRepository
@@ -30,8 +29,7 @@ class QuestionsActivity : AppCompatActivity() {
         setObservers()
         viewModel.getAllQuestions()
     }
-
-    private fun setObservers() {
+    fun setObservers() {
 
         viewModel.questionList.observe(this) { it ->
             binding.textQuestion.text = it.statement

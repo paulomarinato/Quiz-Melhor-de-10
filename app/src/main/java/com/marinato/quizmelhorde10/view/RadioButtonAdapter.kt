@@ -47,5 +47,8 @@ class RadioButtonAdapter(
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.text_view)
         val radioButton: RadioButton = itemView.findViewById(R.id.radio_button)
+        init {
+            radioButton.setOnCheckedChangeListener { buttonView, isChecked ->  }
+        }
     }
 }

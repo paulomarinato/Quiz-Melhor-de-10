@@ -1,10 +1,7 @@
 package com.marinato.quizmelhorde10.viewModel
 
-import android.widget.RadioButton
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.marinato.quizmelhorde10.R
 import com.marinato.quizmelhorde10.data.model.Adapter.AdapterApi
 import com.marinato.quizmelhorde10.data.model.QuestionsResponse
 import com.marinato.quizmelhorde10.data.repository.QuestionRepository
@@ -33,9 +30,7 @@ class QuestionViewModel constructor(private val repository: QuestionRepository) 
         })
     }
 
-    fun saveAnswer(questionId : Int) {
-
-    }
+   fun saveAnswer(questionId : Int) {    }
 
 }
 

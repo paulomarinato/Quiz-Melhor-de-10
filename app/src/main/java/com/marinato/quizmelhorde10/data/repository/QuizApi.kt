@@ -1,6 +1,5 @@
 package com.marinato.quizmelhorde10.data.repository
 
-import com.marinato.quizmelhorde10.data.model.AnswerRequest
 import com.marinato.quizmelhorde10.data.model.QuestionsResponse
 import retrofit2.Call
 import retrofit2.http.Body
@@ -15,6 +14,7 @@ interface QuizApi {
 
     @POST("/answer")
     fun saveAnswer(
+        @Body
         @Query("questionId") questionId: Int
     ): Call<Boolean>
 }

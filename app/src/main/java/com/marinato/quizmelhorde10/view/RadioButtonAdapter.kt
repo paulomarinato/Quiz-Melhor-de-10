@@ -8,12 +8,13 @@ import android.widget.RadioButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.marinato.quizmelhorde10.R
+import com.marinato.quizmelhorde10.data.model.QuestionsResponse
 
 class RadioButtonAdapter(
     private val context: Context,
-    private val dataList: List<String>,
+    private val dataList: QuestionsResponse,
     private var selectedItem: Int,
-    private val onClick: (String) -> Unit
+    private val onClick: (Int) -> Unit
 ) : RecyclerView.Adapter<RadioButtonAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,7 +24,8 @@ class RadioButtonAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val itemText = dataList[position]
+        val itemText = dataList.options[position]
+
         holder.textView.text = itemText
         holder.radioButton.isChecked = position == selectedItem
 
@@ -31,13 +33,13 @@ class RadioButtonAdapter(
             if (selectedItem != position) {
                 selectedItem = position
                 notifyDataSetChanged()
-                onClick(dataList[position])
+                onClick(dataList.id)
             }
         }
     }
 
     override fun getItemCount(): Int {
-        return dataList.size
+        return dataList.options.size
     }
 
     fun getSelectedItem(): Int {

@@ -12,6 +12,7 @@ import com.marinato.quizmelhorde10.viewModel.QuestionViewModel
 class QuestionsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuestionsBinding
+    private var idQuestion : Int? = null
     lateinit var viewModel: QuestionViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +33,15 @@ class QuestionsActivity : AppCompatActivity() {
     fun setObservers() {
 
         viewModel.questionList.observe(this) { it ->
-            binding.textQuestion.text = it.statement
-            binding.recyclerOptions.layoutManager = LinearLayoutManager(this)
-            binding.recyclerOptions.adapter = RadioButtonAdapter(this, it.options, 0) {
-                Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+            with(binding) {
+                textQuestion.text = it.statement
+                recyclerOptions.layoutManager = LinearLayoutManager(this@QuestionsActivity)
+                recyclerOptions.adapter = RadioButtonAdapter(this@QuestionsActivity, it, 0) {
+                    idQuestion = it
+                }
+                buttonSubmit.setOnClickListener {
+                    Toast.makeText(this@QuestionsActivity, idQuestion.toString(), Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
